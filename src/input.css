@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-none {
+  @apply hidden;
+}
+
+.notification {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.success {
+  background-color: #25d72b;
+  color: white;
+  border: solid 2px #119015;
+}
+
+.error {
+  background-color: #ff4031;
+  font-size: 20px;
+  color: white;
+  border: solid 2px #800000;
+}
+
+/* Add this CSS to style the scrollbar with the same border radius as the form */
+.modal {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+}
+
+.modal::-webkit-scrollbar {
+  width: 7px;
+  /* Adjust to change scrollbar width */
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color of the thumb (dragging part) */
+  border-radius: 5rem;
+  /* Set the same border radius as the form */
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  /* Color of the track (background) */
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  /* Set the same border radius as the form */
+}
+
+/* Add this CSS to your stylesheet or in a <style> tag within your HTML */
+.emoji-option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.emoji-option input[type="radio"] {
+  display: none;
+  /* Hide the default radio input */
+}
+
+.emoji {
+  font-size: 35px;
+  /* Adjust the font size to control emoji size */
+  margin-right: 10px;
+  /* Add spacing between emoji and label */
+  cursor: pointer;
+  /* Add a pointer cursor to the emoji for interaction */
+}
+
+/* Style when radio input is checked */
+.emoji-option input[type="radio"]:checked+.emoji {
+  background-color: #316cff;
+  border-radius: 2rem;
+}
+
+/* Circle indicator styles */
+.circle-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  background-color: #888;
+  /* Default color is gray for all circles */
+  border: 3px solid transparent;
+  /* Add a transparent border */
+}
+
+.circle-indicator:hover,
+.circle-indicator.answered:hover {
+  background-color: #316cff;
+}
+
+.circle-indicator.answered {
+  background-color: #c08e43;
+  /* Yellow color for answered questions */
+}
+
+.circle-indicator.current {
+  border-color: #d1ecf7;
+  /* Border highlight color for the current question */
+}

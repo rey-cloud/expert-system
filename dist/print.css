@@ -1,0 +1,28 @@
+/* Add your print-specific styles here */
+body {
+  font-size: 12pt;
+  /* Adjust font size for printing */
+  background-color: white;
+  /* Ensure a white background for printing */
+}
+
+/* Hide the navigation bar when printing */
+nav {
+  display: none;
+}
+
+/* Adjust other styles as needed */
+
+/* Ensure page breaks as needed */
+@media print {
+
+  /* Insert page breaks as necessary to control page layout */
+  #invoice {
+    page-break-before: auto;
+  }
+
+  @page {
+    margin: 0;
+    /* Set page margins to 0 for no margin on printed page */
+  }
+}
